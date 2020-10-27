@@ -31,6 +31,11 @@
   opacity: 0.8;
 }
 
+/* translateX */
+.left-1 {
+  transform: translateX(-10%);
+}
+
 /* translateY */
 
 .up-1 {
@@ -47,6 +52,10 @@
 
 .up-5 {
   transform: translateY(-50%);
+}
+
+.up-7 {
+  transform: translateY(-70%);
 }
 
 .up-10 {
@@ -80,14 +89,19 @@
   height: 40px;
 }
 
+/* width */
+.w-1 {
+  width: 100px;
+}
+
 /* transitions */
 
 .hero-enter {
-  animation: hero-up 500ms ease-in forwards;
+  animation: hero-up 1s ease-in forwards;
 }
 
 .hero-exit {
-  animation: hero-down 500ms ease-in-out;
+  animation: hero-down 1s ease-in-out;
 }
 
 @keyframes hero-up {
@@ -96,13 +110,13 @@
     height: 30vh;
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
 }
 
 @keyframes hero-down {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   100% {
     transform: translateY(0);
@@ -110,18 +124,18 @@
 }
 
 #market-enter {
-  animation: market-shrink 500ms ease-in forwards;
+  animation: market-shrink 1s ease-in forwards;
 }
 
 #market-enter a h1 {
-  animation: market-shrink 500ms ease-in forwards;
+  animation: market-shrink 1s ease-in forwards;
 }
 
 #market-exit {
-  animation: market-grow 500ms ease-in forwards;
+  animation: market-grow 1s ease-in forwards;
 }
 #market-exit a h1 {
-  animation: market-grow 500ms ease-in forwards;
+  animation: market-grow 1s ease-in forwards;
 }
 
 @keyframes market-shrink {
@@ -147,16 +161,16 @@
 }
 
 #menu-enter {
-  animation: menu-down 500ms ease-in forwards;
+  animation: menu-down 1s ease-in forwards;
 }
 
 #menu-exit {
-  animation: menu-up 500ms ease;
+  animation: menu-up 1s ease-in;
 }
 
 @keyframes menu-up {
   0% {
-    transform: translateY(100%);
+    transform: translateY(50%);
   }
 
   100% {
@@ -169,6 +183,33 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(130%);
+  }
+}
+
+#details-enter {
+  animation: slide-in 1s ease-in forwards;
+}
+
+#details-exit {
+  animation: slide-out 1s ease-in;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

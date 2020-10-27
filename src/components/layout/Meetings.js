@@ -3,11 +3,12 @@ import Marketplace from './Marketplace';
 import Hero from './Hero';
 import Menu from './Menu';
 import Events from '../Events';
+import Details from './Details';
 import EventsContext from '../../context/events/eventsContext';
 
 export default function Meetings() {
 
-  const { display, meetings, event } = useContext(EventsContext);
+  const { display, meetings } = useContext(EventsContext);
 
   return (
     <Fragment>
@@ -16,11 +17,8 @@ export default function Meetings() {
           <div className="row">
             <Marketplace />
           </div>
-
           <div className="row">
-
             <Hero />
-
             <Menu />
             <Events />
           </div>
@@ -31,6 +29,7 @@ export default function Meetings() {
           <div className="row">
             <Marketplace />
           </div>
+          <Details />
 
           <div className="row">
             <Hero />

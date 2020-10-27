@@ -13,7 +13,7 @@ export default function Menu() {
 
     <div className="row ml-2" id={display === "events" ? "menu-enter" : "menu-exit"} style={{ width: "15vw" }}>
       <div className="col">
-        <div className="card p-4 d-flex flex-column bg-light justify-content-center br-4 up-5">
+        <div className="card p-4 d-flex flex-column bg-light justify-content-center br-4 up-7">
           {menu.map((item, index) =>
             <div key={index} className="card p-2 br-5 m-2">
               <h5 className="text-center mb-0">{item}</h5>
